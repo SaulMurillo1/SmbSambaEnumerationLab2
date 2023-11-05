@@ -47,6 +47,38 @@ ping -c 5 192.49.250.3
 <br />
 <br />
 <br />
+Run an Nmap scan to check for open ports: <br/>
+<br/>
+- It looks like port 445 (SMB) is open. 
+<br/>
+<br/>
+Commands: nmap 192.49.250.3
+<br/>
+<br/>
+<img src="https://i.imgur.com/8daTRtN.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+Run Nmap scan which will enumerate version information: <br/>
+<br/>
+- We can see that the nmap command below will check the version for port 445. It looks like port 445 is running Samba. 
+<br/>
+<br/>
+Commands: nmap 192.49.250.3 -p 445 -sV
+<br/>
+<br/>
+<img src="https://i.imgur.com/ZkSOk7w.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 
 
