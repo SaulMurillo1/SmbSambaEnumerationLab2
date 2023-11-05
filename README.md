@@ -79,6 +79,24 @@ Commands: nmap 192.49.250.3 -p 445 -sV
 <br />
 <br />
 <br />
+Run rpcclient command to check if a guest connection is allowed: <br/>
+<br/>
+- It looks like the connection successfully connected and it even shows us the OS version which is 6.1. 
+<br/>
+- In the command down below, -U "" means that the user does not have a username (guest/null session) and -N means that we will try to connect without a password. 
+<br/>
+<br/>
+Commands: rpcclient -U "" -N 192.49.250.3
+<br/>
+<br/>
+<img src="https://i.imgur.com/Whh2sDy.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 
 
