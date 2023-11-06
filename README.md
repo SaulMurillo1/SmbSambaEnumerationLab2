@@ -124,10 +124,50 @@ Use the smbclient tool to list shares: <br/>
 - We can see a list of shares for public, john, aisha, emma, everyone, and IPC$ (null session).
 <br/>
 <br/>
-Commands: smbclient -L 192.49.250.3
+Command: smbclient -L 192.49.250.3
 <br/>
 <br/>
 <img src="https://i.imgur.com/jSOZk0V.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+Use the nmap tool to enumerate what smb protocols & dialects the target machine utilizes: <br/>
+<br/>
+- We can see the dialects that the smb server is running (SMBv1 which is dangerous, but default).
+<br/>
+<br/>
+Command: nmap 192.49.250.3 -p 445 --script smb-protocols
+<br/>
+<br/>
+<img src="https://i.imgur.com/Qg39KlV.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+Use the msfconsole tool to check if the SMB2 protocol is supported by the Samba server: <br/>
+<br/>
+- We can see that the Samba server does support SMB2.
+<br/>
+<br/>
+Commands: msfconsole
+<br/>
+use auxiliary/scanner/smb/smb2
+<br/>
+set rhosts 192.49.250.3
+<br/>
+exploit
+<br/>
+<br/>
+<img src="https://i.imgur.com/eiBVT1L.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
+<br />
+<img src="https://i.imgur.com/99OLlCo.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
 <br />
 <br />
 <br />
