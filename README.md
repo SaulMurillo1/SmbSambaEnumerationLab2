@@ -119,6 +119,22 @@ enum4linux -o 192.49.250.3
 <br />
 <br />
 <br />
+Use the smbclient tool to list shares: <br/>
+<br/>
+- We can see a list of shares for public, john, aisha, emma, everyone, and IPC$ (null session).
+<br/>
+<br/>
+Commands: smbclient -L 192.49.250.3
+<br/>
+<br/>
+<img src="https://i.imgur.com/jSOZk0V.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 
 
