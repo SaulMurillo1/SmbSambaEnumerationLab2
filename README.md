@@ -52,7 +52,7 @@ Run an Nmap scan to check for open ports: <br/>
 - It looks like port 445 (SMB) is open. 
 <br/>
 <br/>
-Commands: nmap 192.49.250.3
+Command: nmap 192.49.250.3
 <br/>
 <br/>
 <img src="https://i.imgur.com/8daTRtN.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
@@ -68,7 +68,7 @@ Run Nmap scan which will enumerate version information: <br/>
 - We can see that the nmap command below will check the version for port 445. It looks like port 445 is running Samba. 
 <br/>
 <br/>
-Commands: nmap 192.49.250.3 -p 445 -sV
+Command: nmap 192.49.250.3 -p 445 -sV
 <br/>
 <br/>
 <img src="https://i.imgur.com/ZkSOk7w.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
@@ -86,10 +86,32 @@ Run rpcclient command to check if a guest connection is allowed: <br/>
 - In the command down below, -U "" means that the user does not have a username (guest/null session) and -N means that we will try to connect without a password. 
 <br/>
 <br/>
-Commands: rpcclient -U "" -N 192.49.250.3
+Command: rpcclient -U "" -N 192.49.250.3
 <br/>
 <br/>
 <img src="https://i.imgur.com/Whh2sDy.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+Use the enum4linux tool to enumerate information about the SMB server: <br/>
+<br/>
+- We can use -h with any tool to get "help" and know how a tool can be used (example below). 
+<br/>
+- We can see Target info, Workgroup/Domain name, Null session check, & OS info. 
+<br/>
+<br/>
+Commands: enum4linux -h
+<br/>
+enum4linux -o 192.49.250.3
+<br/>
+<br/>
+<img src="https://i.imgur.com/SWD3Ez2.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
+<br />
+<img src="https://i.imgur.com/lYw4SnP.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
 <br />
 <br />
 <br />
