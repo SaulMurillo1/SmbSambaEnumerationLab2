@@ -175,6 +175,56 @@ exploit
 <br />
 <br />
 <br />
+Use the nmap tool to list all of the users that exists on the Samba server: <br/>
+<br/>
+- We can see that admin, aisha, elie, emma, john, & shawn exists as users on the Samba server.
+<br/>
+<br/>
+Command: nmap 192.49.250.3 -p 445 --script smb-enum-users
+<br/>
+<br/>
+<img src="https://i.imgur.com/T2wfghz.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+Use the enum4linux tool to list all of the users that exists on the Samba server: <br/>
+<br/>
+- We can see that admin, aisha, elie, emma, john, & shawn exists as users on the Samba server.
+<br/>
+<br/>
+Command: enum4linux -U 192.49.250.3 
+<br/>
+<br/>
+<img src="https://i.imgur.com/6QVHvJJ.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+Use the rpcclient tool find the SID of the user admin: <br/>
+<br/>
+- SIDs are a component of a security database that security authorities can use to identify the user and the permissions that user is entitled to. When users log on to a Windows system, the system generates an access token that includes the user SID, the SID of any groups the user belongs to and the user privilege level.
+<br/>
+<br/>
+Commands: rpcclient -U "" -N 192.49.250.3 
+<br/>
+lookupnames admin
+<br/>
+<br/>
+<img src="https://i.imgur.com/H5gC07p.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 
 
